@@ -25,7 +25,7 @@ function Box({ size , children}) {
       height = "500px";
   }
 
-  return <div style={{ width, height, backgroundColor: "white", border: "solid 1px", padding: "10px", display: "inline-block", margin: "10px"}}>{children}</div>;
+  return <div style={{ width, height, border: "solid 1px", padding: "10px", display: "inline-block", margin: "10px"}}>{children}</div>;
 }
 
 export default Box;

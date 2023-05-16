@@ -1,12 +1,16 @@
 import React from 'react';
 import { useFetch } from '../hooks/useFetch';
-import Loading from './LoadingData';
+import Loading from './Loading';
 import Image from './Image';
 import Box from './Box';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeContext';
 
 const Products = () => {
     const {data: products, loading, error} = useFetch('products/');
+
+    const { theme } = useContext(ThemeContext);
 
 
     if (error){
@@ -25,7 +29,7 @@ const Products = () => {
             <div key={product.id} >
                 <Box size="medium">
                     <Image size="small" source={product.image}/> 
-                    <Link to={'/products/'+product.id}>{product.title}</Link>
+                    <Link to={'/products/'+product.id} style={{ color: theme.foreground }}>{product.title}</Link>
                 </Box>
             </div>
           );

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
+import ToggleSwitch from './ToggleSwitch';
 
 const Toolbar = () => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Toolbar = () => {
     <nav style={{padding: "30px"}}>
       <Button onClick={handleClickHome}>Home</Button>
       <Button onClick={handleClickProducts}>Products</Button>
+      <ToggleSwitch />
     </nav>
   );
 };
