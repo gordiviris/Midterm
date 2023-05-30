@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFetch } from '../hooks/useFetch';
-import Loading from './LoadingData';
+import Loading from './Loading';
 import Image from './Image';
 import Box from './Box';
 import Text from './Text';
